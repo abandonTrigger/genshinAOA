@@ -1,0 +1,151 @@
+<!--pages/index/index.wxml-->
+<!-- 冒险者协会首页 -->
+<view class="container" wx:for="{{indexlist}}">
+    <!-- 实用工具栏 -->
+    <view class="header">
+        <image src="/pages/image/tool.png" class="toolTitle"></image>
+        <text class="toolContent">实用工具</text>
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+        <view class="toolMain">
+            <!-- 今日素材 -->
+            <view class="item item1">
+                <navigator url="/pages/acquisitionRoute/acquisitionRoute" class="skip">
+                    <image src="/pages/image/collect.png" class="itemImg"></image>
+                    <text class="itemText">今日素材</text>
+                </navigator>
+            </view>
+            <!-- 抽卡模拟 -->
+            <view class="item item1">
+                <navigator url="/pages/gachaSimulate/gachaSimulate" class="skip">
+                    <image src="/pages/image/hot.png" class="itemImg"></image>
+                    <text class="itemText">抽卡模拟</text>
+                </navigator>
+            </view>
+            <!-- 原神图鉴 -->
+            <view class="item item1">
+                <navigator url="/pages/fieldGuide/fieldGuide" class="skip">
+                    <image src="/pages/image/book.png" class="itemImg"></image>
+                    <text class="itemText">原神图鉴</text>
+                </navigator>
+            </view>
+            <!-- 活动日历 -->
+            <view class="item item1">
+                <navigator url="/pages/activityCalendar/activityCalendar" class="skip">
+                    <image src="/pages/image/calendar.png" class="itemImg"></image>
+                    <text class="itemText">活动日历</text>
+                </navigator>
+            </view>
+        </view>
+        <view class="toolMain">
+            <!-- 圣遗物评分 -->
+            <view class="item item1">
+                <navigator url="/pages/equipmentScore/equipmentScore" class="skip">
+                    <image src="/pages/image/calculator.png" class="itemImg"></image>
+                    <text class="itemText2">圣遗物评分</text>
+                </navigator>
+            </view>
+            <!-- 养成计算器 -->
+            <view class="item item1">
+                <navigator url="/pages/cultivationCalculator/cultivationCalculator" class="skip">
+                    <image src="/pages/image/royal.png" class="itemImg"></image>
+                    <text class="itemText2">养成计算器</text>
+                </navigator>
+            </view>
+            <!-- 配队推荐 -->
+            <view class="item item1">
+                <navigator url="/pages/teamRecommended/teamRecommended" class="skip">
+                    <image src="/pages/image/flag.png" class="itemImg"></image>
+                    <text class="itemText">配队推荐</text>
+                </navigator>
+            </view>
+            <!-- 成就查询 -->
+            <view class="item item1">
+                <navigator url="/pages/achievementQuery/achievementQuery" class="skip">
+                    <image src="/pages/image/achievement.png" class="itemImg"></image>
+                    <text class="itemText">成就查询</text>
+                </navigator>
+            </view>
+        </view>
+        <!-- 抽卡查询 -->
+        <!-- <view class="toolMain2">
+            <view class="item item1">
+                <navigator url="/pages/gachaInquire/gachaInquire" class="skip">
+                    <image src="/pages/image/gacha.png" class="itemImg"></image>
+                    <text class="itemText">抽卡查询</text>
+                </navigator>
+            </view>
+        </view> -->
+    </view>
+    <!-- 广告栏 -->
+    <view>
+        <image class="navAD" src="{{item.navAD}}" mode="scaleToFill"></image>
+    </view>
+    <!-- 新增角色 -->
+    <view class="addCharacter">
+        <view class="characterTitle">
+            <image src="/pages/image/new.png" class="toolTitle"></image>
+            <text class="toolContent">新增角色</text>
+        </view>
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+        <view class="characterContent">
+        </view>
+    </view>
+    <!-- 新增武器 -->
+    <view class="addWeapon">
+        <view class="weaponTitle">
+            <view class="characterTitle">
+                <image src="/pages/image/weapon.png" class="toolTitle"></image>
+                <text class="toolContent">新增武器</text>
+            </view>
+            <!-- 分割线 -->
+            <view class="divLine"></view>
+        </view>
+        <view class="weaponContent">
+
+        </view>
+    </view>
+    <!-- 今日生日角色 -->
+    <view class="characterBirthday">
+        <view class="birthdayTitle">
+            <view class="characterTitle">
+                <image src="/pages/image/birthday.png" class="toolTitle"></image>
+                <text class="toolContent">今日生日角色</text>
+            </view>
+            <!-- 分割线 -->
+            <view class="divLine"></view>
+        </view>
+        <view class="birthdayContent">
+        </view>
+    </view>
+    <!-- 小程序说明 -->
+    <view class="explain">
+        <view class="explainTitle">
+            <view class="characterTitle">
+                <image src="/pages/image/hint.png" class="toolTitle"></image>
+                <text class="toolContent">小程序说明：{{item.versionNumber}}</text>
+            </view>
+            <!-- 分割线 -->
+            <view class="divLine"></view>
+        </view>
+        <!-- 小程序说明内容 -->
+        <view class="explainContent">
+            <text>\n首页改版、添加实用工具汇总。
+                汇总意见或建议请点击联系我们或使用邮箱反馈。</text>
+            <view bindtap='copyText' data-text="{{item.textEmail}}">BUG反馈邮箱:<text class="textContent"> {{item.textEmail}}</text></view>
+            <text>希望此小程序可以帮助各位旅行者遨游提瓦特大陆
+                旅行者想支持下可点击下方赞赏链接或使用B站充电
+                大会员每月免费领取途径：我的大会员-卡券包
+                建议仅用免费B币充电</text>
+            <view bindtap='copyText' data-text="{{item.textCharge}}">B站充电：<text class="textContent"> {{item.textCharge}}</text></view>
+            <view bindtap='copyText' data-text="{{item.textData}}">数据来源：<text class="textContent"> {{item.textData}}</text></view>
+            <text>数据最后更新时间：{{item.updateTime}}
+                部分图片数据资源源自网络，如若侵权请联系删除。</text>
+        </view>
+    </view>
+    <!-- 打赏池 -->
+    <button class="playTour">打赏池</button>
+    <!-- 底部广告 -->
+    <image class="bottomAD" src="{{item.bottomAD}}" mode="scaleToFill"></image>
+</view>

@@ -1,0 +1,121 @@
+<!--pages/activityCalendar/activityCalendar.wxml-->
+<view class="container">
+    <!-- 活动日历栏 -->
+    <view class="header">
+        <image src="/pages/image/activity.png" class="toolTitle"></image>
+        <text class="toolContent">提瓦特时间管理</text>
+    </view>
+    <image src="{{headerAD}}" mode="aspectFit" class="headerAD"></image>
+    <!-- 突破素材 -->
+    <view class="breakMaterial">
+        <!-- 武器突破素材 -->
+        <view class="weaponMaterial">
+            <text class="toolContent">武器突破素材</text>
+            <view class="detailContent">
+                <view class="contentDetail" wx:for="{{weaponMateriallist}}" wx:key="id">
+                    <image src="{{item.imgUrl}}" class="detailImg"></image>
+                    <view class="detailTitle">
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 天赋突破素材 -->
+        <view class="talentMaterial">
+            <text class="toolContent">天赋突破素材</text>
+            <view class="detailContent">
+                <view class="contentDetail" wx:for="{{talentMateriallist}}" wx:key="id">
+                    <image src="{{item.imgUrl}}" class="detailImg"></image>
+                    <view class="detailTitle">
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 商城兑换 -->
+    <view class="mallExchange">
+        <!-- 角色兑换 -->
+        <view class="characterExchange">
+            <text class="toolContent">本月商城角色兑换</text>
+            <view class="detailContent">
+                <view class="contentDetail" wx:for="{{characterExchangelist}}" wx:key="id">
+                    <image src="{{item.imgUrl}}" class="detailImg"></image>
+                    <view class="detailTitle">
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 武器兑换 -->
+        <view class="weaponExchange">
+            <text class="toolContent">本月商城武器兑换</text>
+            <view class="detailContent">
+                <view class="contentDetail" wx:for="{{weaponExchangelist}}" wx:key="id">
+                    <image src="{{item.imgUrl}}" class="detailImg"></image>
+                    <view class="detailTitle">
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 本期up -->
+    <view class="currentUp">
+        <!-- 角色up -->
+        <view class="characterUp" wx:for="{{characterUplist}}" wx:key="index">
+            <view class="characterUpContent"  >
+                <text class="toolContent">「{{item.title}}」角色活动祈愿</text>
+               
+                <view class="detailContent">
+                    <view class="contentDetail" wx:for="{{item.characterList}}" wx:key="id">
+                        <image src="{{item.imgUrl}}" class="detailImg"></image>
+                        <view class="detailTitle">
+                            {{item.name}}
+                        </view>
+                    </view>
+                </view>
+               
+                <view class="countdown">
+                    <view class="item">
+                        距离角色祈愿结束还有：
+                        <view class="txt-time">{{item.time.day}}{{item.time.hou}}{{item.time.min}}{{item.time.sec}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 武器up -->
+        <view class="weaponUp" wx:for="{{weaponUplist}}" wx:key="index">
+            <view class="weaponUpCentent" >
+                <text class="toolContent">「{{item.title}}」武器活动祈愿</text>
+                <!-- 武器内容 -->
+                <view class="detailContent">
+                    <view class="contentDetail" wx:for="{{item.weaponList}}" wx:key="id">
+                        <image src="{{item.imgUrl}}" class="detailImg"></image>
+                        <view class="detailTitle">
+                            {{item.name}}
+                        </view>
+                    </view>
+                </view>
+                <view class="countdown">
+                    <view class="item">
+                        距离武器祈愿结束还有：
+                        <view class="txt-time">{{item.time.day}}{{item.time.hou}}{{item.time.min}}{{item.time.sec}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 活动日历 -->
+        <view class="limitActivities">
+        <!-- 活动 -->
+            <view class="limitActivitiesTitle" wx:for="{{activities_timeList}}" wx:key="index">
+                <text class="toolContent">「{{item.title}}」限时活动</text>
+                <view class="item">
+                        {{item.con}}：
+                        <view class="txt-time">{{item.time.day}}{{item.time.hou}}{{item.time.min}}{{item.time.sec}}</view>
+                    </view>
+            </view>  
+        </view>
+    </view>
+</view>

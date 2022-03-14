@@ -1,0 +1,33 @@
+<!--pages/fieldGuide/fieldGuide.wxml-->
+<view class="container">
+    <!-- 滑块 -->
+    <view class="navbarTitle">
+        <!-- 导航栏 -->
+        <view class="navbar">
+            <block wx:for="{{navbarTitle}}" wx:key="index">
+                <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+                    <text>{{item}}</text>
+                </view>
+            </block>
+        </view>
+        <view class="movie-content-wrapper">
+            <swiper current="{{navbarActiveIndex}}" bindanimationfinish="onBindAnimationFinish">
+                <swiper-item wx:for="{{navbarTitle}}" wx:key="index">
+                    <scroll-view scroll-y="{{true}}">
+                        {{item}}
+                    </scroll-view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <!-- 滑块选择框 -->
+
+    <!-- 滑块内容 -->
+    <view>
+
+    </view>
+    <!-- 广告 -->
+    <view>
+
+    </view>
+</view>

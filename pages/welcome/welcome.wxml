@@ -1,0 +1,19 @@
+<!--pages/welcome/welcome.wxml-->
+<!-- 冒险者协会欢迎页 -->
+<view wx:for="{{welcomelist}}">
+  <!-- 使用bindload绑定函数动态自适应 -->
+  <image 
+  class="bg-image" 
+  src="{{item.imageUrl}}" 
+  bindload="imageLoad" 
+  data-index="{{ index }}" 
+  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;" 
+  mode="aspectFill"
+  >
+  <text class="usermotto">{{item.motto}}</text>
+  <!-- 欢迎页自动跳转 -->
+  <view class='countDown' wx:if="{{countDownNum}}" bindtap="onJumpIndex">
+  <text>{{countDownNum}}s后跳转</text>
+  </view>
+  </image>
+</view>

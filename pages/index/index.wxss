@@ -1,0 +1,138 @@
+/**index.wxss**/
+.container {
+    height: 220vh;
+    width: 100%;
+    background-color: #353535;
+}
+
+/* 实用工具 */
+.header {
+    height: 25vh;
+    width: 100%;
+}
+
+/* 分割线 */
+.divLine {
+    margin-top: 20rpx;
+    background-color: rgba(255, 255, 255, 0.575);
+    width: 100%;
+    height: 1rpx;
+}
+
+/* 实用工具标题 */
+.toolTitle {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+
+.toolContent {
+    margin-left: 20rpx;
+    color: #fff;
+}
+
+/* 实用工具内容 */
+.toolMain {
+    margin-top: 30rpx;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.toolMain2 {
+    margin-top: 30rpx;
+    display: flex;
+    width: 25%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    display: flex;
+    height: 100rpx;
+    width: 100rpx;
+    align-items: center;
+}
+
+.item1 {
+    display: flex;
+    width: 140rpx;
+    height: 60px;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.itemImg {
+    margin-top: 10rpx;
+    margin-left: 40rpx;
+    display: flex;
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.itemText {
+    margin-left: 20rpx;
+    font-size: 26rpx;
+}
+
+.itemText2 {
+    margin-left: 6rpx;
+    font-size: 26rpx;
+}
+
+.skip {
+    width: 140rpx;
+}
+
+.navAD {
+    margin-top: 60rpx;
+    height: 310rpx;
+    width: 800rpx;
+}
+
+.addCharacter {
+    height: 20vh;
+    width: 100%;
+}
+
+.characterContent {
+    height: 10vh;
+}
+
+.addWeapon {
+    height: 20vh;
+    width: 100%;
+}
+
+.characterBirthday {
+    height: 20vh;
+    width: 100%;
+}
+
+.explain {
+    height: 40vh;
+    width: 100%;
+}
+
+.explainContent {
+    color: #fff;
+}
+
+.textContent {
+    color: rgb(36, 139, 224);
+}
+
+.playTour {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    background-color: rgb(207, 34, 34);
+    color: #fff;
+    border-radius: 98rpx;
+}
+
+.bottomAD {
+    height: 30vh;
+    width: 100%;
+}

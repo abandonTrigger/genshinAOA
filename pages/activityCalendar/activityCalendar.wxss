@@ -1,0 +1,167 @@
+/* pages/activityCalendar/activityCalendar.wxss */
+.container {
+  height: 160vh;
+  width: 100%;
+  background-color: #353535;
+  flex-direction: column;
+}
+
+/* 活动日历 */
+.header {
+  height: 15vh;
+  width: 100%;
+}
+
+.headerAD {
+  margin-top: -180rpx;
+  width: 100vw;
+}
+
+/* 活动日历标题 */
+.toolTitle {
+  margin-top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 通用标题 */
+.textContent {
+  margin-left: 20rpx;
+  color: #fff;
+}
+
+.toolContent {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: #fff;
+}
+
+/* 突破素材 */
+.breakMaterial {
+  height: 30vh;
+  width: 100%;
+}
+
+/* 武器突破素材 */
+.weaponMaterial {
+  margin-top: -60rpx;
+  height: 15vh;
+  width: 100%;
+}
+
+/* 武器突破素材图片 */
+.detailImg {
+  margin-top: 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 武器突破素材描述 */
+.detailTitle {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+/* 天赋突破素材 */
+.talentMaterial {
+  margin-top: 50rpx;
+  height: 15vh;
+  width: 100%;
+}
+
+/* 商城兑换 */
+.mallExchange {
+  height: 30vh;
+  width: 100%;
+}
+
+/* 角色兑换 */
+.characterExchange {
+  margin-top: -30rpx;
+  height: 15vh;
+  width: 100%;
+}
+
+/* 武器兑换 */
+.weaponExchange {
+  margin-top: 20rpx;
+  height: 15vh;
+  width: 100%;
+}
+
+/* 本期up */
+.currentUp {
+  height: 50vh;
+  width: 100%;
+}
+
+/* 角色up */
+.characterUp {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+}
+
+.characterUpContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  width: 100vw;
+}
+
+.contentDetail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 武器up */
+.weaponUp {
+  display: flex;
+  align-items: center;
+  height: 25vh;
+  width: 100%;
+  background-color: #353535;
+}
+
+.weaponUpCentent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 限时活动 */
+.limitActivities {
+  height: 40vh;
+  width: 100%;
+  background-color: #353535;
+}
+
+.limitContent {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 倒计时模块 */
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180rpx;
+  width: 100%;
+  color: #fff;
+}
+
+.item .txt-time {
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+}

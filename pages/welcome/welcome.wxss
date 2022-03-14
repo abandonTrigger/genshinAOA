@@ -1,0 +1,67 @@
+/**welcome.wxss**/
+.bg-image{
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  margin: 0px;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-size: 100% 100%;
+}
+/* 针对常见机型 */
+@media screen and (min-width: 375px) {
+  .usermotto {
+    display: flex;
+    margin-top: -200rpx;
+    font-size: 22px;
+    color: white;
+  }
+  .countDown {
+    margin-top: 60rpx;
+    display: flex;
+    align-items: center;
+    width: 140rpx;
+    /* border: 1px solid; */
+    color: white;
+    border-radius: 20px;
+  }
+}
+
+/* 针对ipad */
+@media screen and (min-width: 768px) {
+  .countDown {
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+    width: 75rpx;
+    /* border: 1px solid; */
+    color: white;
+    border-radius: 20px;
+  }
+}
+/* 针对ipadpro10.5 */
+@media screen and (min-width: 834px) {
+  .countDown {
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+    width: 70rpx;
+    /* border: 1px solid; */
+    color: white;
+    border-radius: 20px;
+  }
+}
+/* 针对ipadpro12.9 */
+@media screen and (min-width: 1024px) {
+  .countDown {
+    margin-top: 25rpx;
+    display: flex;
+    align-items: center;
+    width: 55rpx;
+    /* border: 1px solid; */
+    color: white;
+    border-radius: 20px;
+  }
+}
